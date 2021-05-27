@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-@author: Krish Naik
+@author:nithnshetty
 """
 # Importing the necessary Libraries
 from flask_cors import CORS,cross_origin
@@ -69,5 +69,5 @@ def searchImage():
 
 
 if __name__ == "__main__":
-    app.run(debug=True) # port to run on local machine
+    app.run(debug=True) 
    #app.run(debug=True) # to run on cloud
