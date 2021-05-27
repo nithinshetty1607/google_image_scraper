@@ -11,7 +11,6 @@ import json
 import urllib.request
 import urllib.parse
 import urllib.error
-import requests
 from urllib.request import urlretrieve
 
 class ScrapperImage:
@@ -27,15 +26,15 @@ class ScrapperImage:
    # get Raw HTML
     def scrap_html_data(url,header):
         
-        response = requests.get(url, headers=header)
-        html = response.text
-        html_soup = bs(html, 'html.parser')
+        #response = requests.get(url, headers=header)
+        #html = response.text
+        #html_soup = bs(html, 'html.parser')
         
-        #response = requests.get(url,headers=header)
-        #response = urllib.request.urlopen(request)
-        ##responseData = response.text
-        #html = bs(responseData, 'html.parser')
-        return html_soup
+        response = requests.get(url,headers=header)
+        response = urllib.request.urlopen(request)
+        #responseData = response.text
+        html = bs(responseData, 'html.parser')
+        return html
     
     # contains the link for Large original images, type of  image
     def getimageUrlList(rawHtml):
