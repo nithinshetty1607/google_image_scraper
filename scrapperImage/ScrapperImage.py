@@ -26,13 +26,9 @@ class ScrapperImage:
    # get Raw HTML
     def scrap_html_data(url,header):
         
-        #response = requests.get(url, headers=header)
-        #html = response.text
-        #html_soup = bs(html, 'html.parser')
-        
-        response = requests.get(url,headers=header)
+        request=urllib.request.Request(url,headers=header)
         response = urllib.request.urlopen(request)
-        #responseData = response.text
+        responseData = response.read()
         html = bs(responseData, 'html.parser')
         return html
     
