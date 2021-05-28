@@ -90,7 +90,7 @@ class ScrapperImage:
     def delete_downloaded_images(self,list_of_images):
         for self.image in list_of_images:
             try:
-                os.remove("./static"+self.image)
+                os.remove("./static/"+self.image)
             except Exception as e:
                 print('error in deleting:  ',e)
         print("Done")

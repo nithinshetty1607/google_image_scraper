@@ -65,5 +65,6 @@ def searchImage():
 
 
 if __name__ == "__main__":
-    app.run(debug=True) 
-   #app.run(debug=True) # to run on cloud
+    
+    #app.run(debug=True) 
+    app.run(debug=True) # to run on cloud
